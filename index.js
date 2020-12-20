@@ -5,8 +5,10 @@ const currentWeekday = dateObject.toLocaleDateString("default", {
   weekday: "long",
 });
 
-if (currentWeekday === "Sunday") {
-  console.log("before");
-  await getAvailablePosition();
-  console.log("after");
-}
+(async () => {
+  if (currentWeekday === "Sunday") {
+    console.log("before");
+    await getAvailablePosition();
+    console.log("after");
+  }
+})();
