@@ -22,7 +22,8 @@ const getAvailablePosition = async () => {
       const messageId = await client.messages.create({
         from: process.env.TWILIO_PHONE_NUMBER,
         to: process.env.DESTINATION_PHONE_NUMBER,
-        body: process.env.OUTGOING_MESSAGE_BODY,
+        // body: process.env.OUTGOING_MESSAGE_BODY,
+        body: noPositionElement.textContent,
       });
     }
   } catch (error) {
