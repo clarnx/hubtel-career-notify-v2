@@ -5,8 +5,8 @@ const currentWeekday = dateObject.toLocaleDateString("default", {
   weekday: "long",
 });
 
-(async () => {
-  if (currentWeekday === "Friday") {
+if (currentWeekday === process.env.DAY_OF_WEEK) {
+  (async () => {
     await getAvailablePosition();
-  }
-})();
+  })();
+}
